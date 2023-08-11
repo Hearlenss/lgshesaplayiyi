@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js"> 
+</script>
+<style>
+ /* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.rwd-table {
+  background: #c0b8b8;
+  color: rgb(255, 255, 255);
+  font-size:16px;
+  overflow: hidden;
+}
+.rwd-table tr {
+ 
+  border :solid  #000000 1px;
+}
+.rwd-table th, .rwd-table td {
+  margin: .5em 1em;
+}
+@media (min-width: 520px) {
+  .rwd-table th, .rwd-table td {
+    padding: 0.4em !important;
+  
+  }
+}
+.rwd-table th, .rwd-table td:before {
+  color: #000000;
+  font-size:19px;
+}
+.yazi
+{
+font-size:12px;
+}
+
+ 
+.textbox
+{
+    font-family:Trebuchet MS, Times New Roman, Garamond;
+    float:left;
+    height:30px;   
+    border:1px solid #ffffff none;
+    padding:2px 2px 2px 2px;
+    border-collapse:collapse;
+    color:#ffffff;
+    font-weight:bold;
+    font-size:medium;
+}
+
+.btnKayit
+{
+   float:center;
+   width:auto;
+   height:40px;
+   line-height:30px;
+   text-align:center;
+   color:#000000;
+   font-family:Trebuchet MS, Times New Roman, Garamond;
+   font-weight:bold;
+    font-size:large;
+    border:10px solid #ffffff none;
+    border-radius: 5px;
+  }
+  
+
+.btnKayit :hover
+{
+   float:left;
+   width:100px;
+   height:40px;
+   line-height:40px;
+   text-align:center;
+   color:rgb(0, 0, 0);
+   font-family:Trebuchet MS, Times New Roman, Garamond;
+   font-weight:bold;
+    font-size:large;
+    border:1px solid #ffffff none;
+    
+    }
+    
+.ovalkenar
+{
+background-color:#fff;
+width:700px;
+height:500px;
+display:center;
+-khtml-border-radius:5px;
+-webkit-border-radius:5px;
+-moz-border-radius:5px;
+border-radius: 5px;
+}
+.tt
+{
+text-align:center; 
+font-weight: bold;
+padding:0 
+}
+.ttOnly
+{
+text-align:center; 
+/*color:yellow !important;*/
+background-color: #ffffff;
+font-weight: bold;
+padding:0 
+}
+</style>
+</head>
+<body>
+<div class="clearfix"></div>
+    <!--      Content/Teaser  -->
+    <section id="maincontent">
+        <!-- BREADCRUMBS -->
+        
+          <!-- CONTENT/ARTIKEL -->
+        <div class="container_12">
+        
+            <div class="grid_12 text-center">
+                <!-- LOOP HERE... PUT THE QUERY HERE -->
+                <article class="singlepost page">
+                    <div class="clearfix"></div>   
+                    <div class="grid_4">&nbsp;</div>
+                    <div class="grid_4 text-center">
+                            <div class="content-entry text-center">
+                               <!-- <h1>LGS Puan Hesaplama</h1>
+                               type tel idi onun yerine number yaptım type tel ? -->
+                                    <table class="rwd-table">
+                                      <tr>
+                                        <th style="padding:3px">Testler</th>
+                                        <th style="padding:3px">Soru Sayısı</th>
+                                        <th style="padding:3px">Doğru</th>
+                                        <th style="padding:3px">Yanlış</th>
+                                      </tr>
+
+                                     <tr>
+                                        <td data-th="Test" style="vertical-align: middle; ">Türkçe</td>
+                                        
+                                         <td data-th="Soru Sayısı"><input  class="ttOnly"  type="tel" readonly="readonly" value="20" name="T1" size="7" style="border:groove; border-radius: 5px; border-color: #F0F0F0;  background-color:#C0C0C0; width:40px;height:40px"/></td>
+                                         <td data-th="Doğru" style="vertical-align: middle"><input autocomplete="off"  class="tt" type="number" onkeypress="return isNumberKey(event)" maxlength="2" id="turD" name="T8" size="7" style="text-align:center;border:groove;border-radius: 5px;border-color: #F0F0F0;width:40px;height:40px " />
+                                                                   <input id="tur8AdoHidden" type="text" class="tt" hidden="hidden" /></td>
+
+                                        <td data-th="Yanlış" style="vertical-align: middle"><input class="tt" type="number" onkeypress="return isNumberKey(event)"  maxlength="2" id="turY" name="T88" size="7" style="text-align:center;border:groove;border-radius: 5px;border-color: #F0F0F0;width:40px;height:40px "/>
+                                                                   </td>
+                                      </tr>
+ 
+                                      
+                                      <tr>
+                                        <td data-th="Test" style="vertical-align: middle">Matematik</td>
+                                        
+                                         <td data-th="Soru Sayısı"><input class="ttOnly" type="tel" readonly="readonly" id="matSS" value="20" name="T2" size="7" style="padding:0;background-color: #C0C0C0; text-align:center;border:groove;border-radius: 5px;border-color: #F0F0F0; width:40px;height:40px;color: #34495E; font-weight: bold " /></td>
+                                        
+                                         <td data-th="Doğru" style="vertical-align: middle"><input class="tt" type="number" onkeypress="return isNumberKey(event)"  maxlength="2" id="matD" name="T9" size="7" style="border:groove;border-radius: 5px; border-color: #F0F0F0; text-align:center;width:40px;height:40px "  />
+                                             <input id="mat8AdoHidden" type="text" class="tt" hidden="hidden" /></td>
+                                        
+                                          <td data-th="Yanlış" style="vertical-align: middle"><input class="tt"  type="number" onkeypress="return isNumberKey(event)"  maxlength="2" id="matY" name="T9" size="7" style="border:groove;border-radius: 5px; border-color: #F0F0F0; text-align:center;width:40px;height:40px " />
+                                             </td>
+                                      </tr>
+                                     <tr>
+                                        <td data-th="Test" style="vertical-align: middle">Fen Bilimleri</td>
+                                        
+                                         <td data-th="Soru Sayısı"><input  class="ttOnly"  type="tel" readonly="readonly" id="fenSS" value="20" name="T4" size="7" style="background-color: #C0C0C0; text-align:center;border:groove;border-radius: 5px;border-color: #F0F0F0; width:40px;height:40px;color: #34495E; font-weight: bold " /></td>
+                                        
+                                         <td data-th="Doğru" style="vertical-align: middle"><input class="tt"  type="number" onkeypress="return isNumberKey(event)"  maxlength="2" id="fenD" name="T11" size="7" style="border:groove;border-radius: 5px; border-color: #F0F0F0; text-align:center;width:40px;height:40px "  />
+                                             <input id="fen8AdoHidden" type="tel" class="tt" hidden="hidden" /></td>
+
+                                         <td data-th="Yanlış" style="vertical-align: middle"><input class="tt"  type="number" onkeypress="return isNumberKey(event)"  maxlength="2" id="fenY" name="T11" size="7" style="border:groove;border-radius: 5px; border-color: #F0F0F0; text-align:center;width:40px;height:40px " />
+                                         </td>
+                                      </tr>
+                                     <tr>
+                                        <td data-th="Test" style="vertical-align: middle">ink. Tarihi ve <br /> Atatürkçülük</td>
+                                        
+                                         <td data-th="Soru Sayısı"><input class="ttOnly"  type="tel" readonly="readonly" id="sosSS" value="10" name="T5" size="7" style="background-color: #C0C0C0; text-align:center;border:groove;border-radius: 5px;border-color: #F0F0F0; width:40px;height:40px;color: #34495E; font-weight: bold " /></td>
+                                        
+                                         <td data-th="Doğru" style="vertical-align: middle"><input class="tt"  type="number" onkeypress="return isNumberKey(event)"  maxlength="2" id="sosD" name="T12" size="7" style="border:groove;border-radius: 5px; border-color: #F0F0F0; text-align:center;width:40px;height:40px "/>
+                                             <input id="sos8AdoHidden" type="text" class="tt" hidden="hidden" /></td>
+
+                                         <td data-th="Yanlış" style="vertical-align: middle"><input class="tt"  type="number" onkeypress="return isNumberKey(event)"  maxlength="2" id="sosY" name="T12" size="7" style="border:groove;border-radius: 5px; border-color: #F0F0F0; text-align:center;width:40px;height:40px " />
+                                             </td>
+                                      </tr>
+                                     <tr>
+                                        <td data-th="Test" style="vertical-align: middle">Yabancı Dil</td>
+                                        
+                                         <td data-th="Soru Sayısı"><input  class="ttOnly" type="tel" readonly="readonly" id="ingSS" value="10" name="T6" size="7"  style="background-color: #C0C0C0; text-align:center;border:groove;border-radius: 5px;border-color: #F0F0F0; width:40px;height:40px;color: #34495E; font-weight: bold " /></td>
+                                        
+                                         <td data-th="Doğru" style="vertical-align: middle"><input class="tt"  type="number" onkeypress="return isNumberKey(event)"  maxlength="2" id="ingD" name="T13" size="7" style="border:groove;border-radius: 5px; border-color: #F0F0F0; text-align:center;width:40px;height:40px " />
+                                               <input id="ing8AdoHidden" type="text" class="tt" hidden="hidden" /></td>
+
+                                         <td data-th="Yanlış" style="vertical-align: middle"><input class="tt"  type="number" onkeypress="return isNumberKey(event)"  maxlength="2" id="ingY" name="T13" size="7" style="border:groove;border-radius: 5px; border-color: #F0F0F0; text-align:center;width:40px;height:40px " />
+                                               </td>
+                                      </tr>
+                                    <tr>
+                                        <td data-th="Test" style="vertical-align: middle">Din Kültürü Ahlak Bilgisi</td>
+                                        
+                                         <td data-th="Soru Sayısı"><input  class="ttOnly" type="tel" readonly="readonly" id="dinSS" value="10" name="T3" size="7"  style="background-color: #C0C0C0; text-align:center;border:groove;border-radius: 5px;border-color: #F0F0F0; width:40px;height:40px;color: #34495E; font-weight: bold " /></td>
+                                        
+                                         <td data-th="Doğru" style="vertical-align: middle"><input class="tt"  type="number" onkeypress="return isNumberKey(event)"  maxlength="2" id="dinD" name="T10" size="7" style="border:groove;border-radius: 5px; border-color: #F0F0F0; text-align:center;width:40px;height:40px" />
+                                             <input id="din8AdoHidden" type="tel" class="tt" hidden="hidden" /></td>
+
+                                        <td data-th="Yanlış" style="vertical-align: middle"><input class="tt"  type="number" onkeypress="return isNumberKey(event)"  maxlength="2" id="dinY" name="T10" size="7" style="border:groove;border-radius: 5px; border-color: #F0F0F0; text-align:center;width:40px;height:40px" />
+                                             </td>
+                                      </tr>
+                                       <tr><td>   </td></tr>
+                                      <tr>
+                                        <td data-th=" "><input type="submit"  value="Temizle" id="butonTemizle" class="btnKayit"  /></td>
+                                        <td data-th=" "><input type="button" value="Hesapla" class="btnKayit" onclick="javascript:puan_hesapla()"/></td>
+                                        <th>PUAN</th>
+                                        <td data-th="Puan" style="vertical-align:middle"><input id="yaz500" type="tel" readonly="readonly" class="tt"/></td>
+                                      </tr>
+                        
+                                    </table>
+                            </div>
+                            
+                            <div id="bosDiv" style="display: none; margin-left: 12px; font-size: 14px;">
+                                <p></p>
+                            </div>
+                    </div>
+                    <div class="grid_4">&nbsp;</div>
+                </article>
+                
+                <!-- END/CLOSE THE QUERY HERE -->
+                <div class="clearfix"></div>
+            </div>
+              
+
+            <div class="clearfix"></div>
+            <!-- END sidebar -->
+        </div>
+        
+        
+    <div class="clearfix"></div>
+    </section>
+    
+<div class="clearfix"></div>
+    <!--      Footer -->
+
+<footer id="mainfooter">
+
+</footer>
+
+<!-- END #mainfooter FOOTER -->
+<div class="clearfix"></div>
+
+<script>
+$(document).ready(function () {
+ // alert("sav")
+ // document.getElementById("tutar").readOnly = false;
+ });
+</script>
+
+
+<script type="text/javascript">
+    /* <![CDATA[ */
+    var google_conversion_id = 1001623803;
+    var google_conversion_language = "en";
+    var google_conversion_format = "3";
+    var google_conversion_color = "ffffff";
+    var google_conversion_label = "o-QdCNDnol4Q-6HO3QM";
+    var google_remarketing_only = false;
+    /* ]]> */
+</script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-64657117-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+<script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="//www.googleadservices.com/pagead/conversion/1001623803/?label=o-QdCNDnol4Q-6HO3QM&amp;guid=ON&amp;script=0"/>
+</div>
+</noscript>
+
+<script type="text/javascript">
+
+    jQuery(function ($) {
+        $('#bosDiv').hide();
+    });
+    jQuery(function ($) {
+        $('#tur8AdoHidden').hide();
+    });
+    jQuery(function ($) {
+        $('#mat8AdoHidden').hide();
+    });
+    jQuery(function ($) {
+        $('#fen8AdoHidden').hide();
+    });
+    jQuery(function ($) {
+        $('#sos8AdoHidden').hide();
+    });
+    jQuery(function ($) {
+        $('#ing8AdoHidden').hide();
+    });
+    jQuery(function ($) {
+        $('#din8AdoHidden').hide();
+    });
+    function virguldenSonra(deger,basamak) {
+        //alert("deger:"+deger);
+       // alert("basamak:" + basamak);
+        var dbl = deger.toFixed(basamak);
+        
+        //alert("dbl:" + dbl);
+
+        var spl = dbl.split('.');
+        if (spl[1] == 0)
+            return spl[0];
+        return dbl.replace(".", ",");
+    }
+    $(function () {
+        $('#hesapla2').click(function () {
+            var jysbp = Number($('#txtYSBP').val());
+            var jEnysbp = Number($('#txtEnYSBP').val());
+            var jdp = Number($('#txtDP').val());
+            var jyaz = Number($('#yaz').val());
+            var jyaz500 = Number($('#yaz500').val());
+            if (jysbp == "" || jEnysbp == "" || jdp == "") {
+                $('#bosDiv2').show();
+                $('#bosDiv2').html('*Lütfen alanları boş geçmeyiniz.');
+            }           
+            else {
+                var jiysbp = $('#txtYSBP').val();
+                var jiEnysbp = $('#txtEnYSBP').val();
+                var jidp = $('#txtDP').val();
+                var jiyaz = $('#yaz').val();
+                var jiyaz500 = $('#yaz500').val();
+
+
+                $("#bosDiv2").hide();
+                var url = "sinifPuaniHesapla";
+                $.ajax({
+                    type: "POST",
+                    url: url,
+                    data: { ysbp: jiysbp, enysbp: jiEnysbp, dp: jidp, yaz: jiyaz, yaz500: jiyaz500 },
+                    success: function (sonucun) {
+                        var puan = sonucun.split('*');
+                        $('#txtSinifPuani').val(puan[0]);
+                        $('#txtSinifPuani500').val(puan[1]);
+                    }
+                });
+            }
+
+        });
+
+    });
+    $(function () {
+        $('.tt').change(function () {
+
+            var turSoruSayisi = parseInt(20);           
+            var matSoruSayisi = parseInt(20);           
+            var fenSoruSayisi = parseInt(20);           
+            var sosSoruSayisi = parseInt(10);           
+            var ingSoruSayisi = parseInt(10);           
+            var dinSoruSayisi = parseInt(10);
+
+    
+            var jtd = Number($("#turD").val());
+            var jty = Number($("#turY").val());
+            var jtn = jtd - (jty / 3);
+            if ((jtd + jty) > turSoruSayisi) { alert("Toplam En fazla " + turSoruSayisi + " olabilir!"); $("#turD").val(""); $("#turY").val(""); return; }
+
+            var jmd = Number($("#matD").val());
+            var jmy = Number($("#matY").val());
+            var jmn = jmd - (jmy / 3);
+            if (jmd + jmy > matSoruSayisi) { alert("Toplam En fazla " + matSoruSayisi + " olabilir!"); $("#matD").val(""); $("#matY").val(""); return; }
+          
+            var jfd = Number($("#fenD").val());
+            var jfy = Number($("#fenY").val());
+            var jfn = jfd - (jfy / 3);
+            if (jfd + jfy > fenSoruSayisi) { alert("Toplam En fazla " + fenSoruSayisi + " olabilir!"); $("#fenD").val(""); $("#fenY").val(""); return; }           
+            
+            var jsd = Number($("#sosD").val());
+            var jsy = Number($("#sosY").val());
+            var jsn = jsd - (jsy / 3);
+            if (jsd + jsy > sosSoruSayisi) { alert("Toplam En fazla " + sosSoruSayisi + " olabilir!"); $("#sosD").val(""); $("#sosY").val(""); return; }
+
+            
+            var jid = Number($("#ingD").val());
+            var jiy = Number($("#ingY").val());
+            var jin = jid - (jiy / 3);
+            if (jid + jiy > ingSoruSayisi) { alert("Toplam En fazla " + ingSoruSayisi + " olabilir!"); $("#ingD").val(""); $("#ingY").val(""); return; }
+            
+            var jdinD = Number($("#dinD").val());
+            var jdinY = Number($("#dinY").val());
+            var jdinN = jdinD - (jdinY / 3);
+            if (jdinD + jdinY > dinSoruSayisi) { alert("Toplam En fazla " + dinSoruSayisi + " olabilir!"); $("#dinD").val(""); $("#dinYS").val(""); return; }
+
+        });
+    });
+    function puan_hesapla() {
+        
+        $("#bosDiv").hide();
+        $("#yaz").hide();
+        $("#yaz500").hide();
+
+        var jtd = Number($("#turD").val());
+        var jty = Number($("#turY").val());
+        var jtn = jtd - (jty / 3);
+        
+        var jmd = Number($("#matD").val());
+        var jmy = Number($("#matY").val());
+        var jmn = jmd - (jmy / 3);
+
+        var jfd = Number($("#fenD").val());
+        var jfy = Number($("#fenY").val());
+        var jfn = jfd - (jfy / 3);
+
+        var jsd = Number($("#sosD").val());
+        var jsy = Number($("#sosY").val());
+        var jsn = jsd - (jsy / 3);
+
+        var jid = Number($("#ingD").val());
+        var jiy = Number($("#ingY").val());
+        var jin = jid - (jiy / 3);
+
+        var jdinD = Number($("#dinD").val());
+        var jdinY = Number($("#dinY").val());
+        var jdinN = jdinD - (jdinY / 3);
+        
+
+        var soruTur = jtd;
+        var soruMat = jmd;
+        var soruFen = jfd;
+        var soruSos = jsd;
+        var soruIng = jid;
+        var soruDin = jdinD;
+        
+        
+        var turSoruSayisi = parseInt(20);       
+        var matSoruSayisi = parseInt(20);
+        var fenSoruSayisi = parseInt(20);
+        var sosSoruSayisi = parseInt(10);
+        var ingSoruSayisi = parseInt(10);
+        var dinSoruSayisi = parseInt(10);
+        
+        if (jtd == "" && jmd == "" && jfd == "" && jsd == "" && jid == "" && jdinD == "" ) {
+            $('#bosDiv').html("<br/><font color=\"red\">*Lütfen alanları boş geçmeyiniz..</font>");
+            $('#bosDiv').show();
+            $('#yaz500').fadeIn(2000, function () { }).val(virguldenSonra(0, 2));
+        }
+
+        else {
+            $('#hesapSonuc').fadeIn(1000, function () { });
+            $("#bosDiv").hide();
+
+
+
+            var toplamAdo = Number($("#tur8AdoHidden").val()) + Number($("#mat8AdoHidden").val()) + Number($("#fen8AdoHidden").val()) + Number($("#sos8AdoHidden").val()) + Number($("#ing8AdoHidden").val()) + Number($("#din8AdoHidden").val());
+            //alert(jtn + " " + jmn + " " + jfn + " " + jsn + " " + jin + " " + jdinN);
+            //var say_kt = (400 / 15)*20 /5
+            //var soz_kt = (400 / 15)*10
+            //alert(say_kt);
+            var puan = (100 + ((jtn + jmn + jfn) * 5.334) + ((jsn + jin + jdinN) * 2.667))
+            if (puan > 500) { puan = 500 }
+            if (puan < 100) { puan = 100 }
+            $('#yaz').fadeIn(2000, function () { }).val(virguldenSonra(puan, 2));
+            $('#yaz500').fadeIn(2000, function () { }).val(virguldenSonra(puan, 2));
+
+        }
+    }
+
+    $(function () {
+        $('#butonTemizle').click(function () {
+            document.getElementById("turD").value = "";           
+            document.getElementById("turY").value = "";           
+
+            document.getElementById("matD").value = "";           
+            document.getElementById("matY").value = "";
+
+            document.getElementById("fenD").value = "";
+            document.getElementById("fenY").value = "";
+
+            document.getElementById("sosD").value = "";
+            document.getElementById("sosY").value = "";
+
+            document.getElementById("ingD").value = "";
+            document.getElementById("ingY").value = "";
+
+            document.getElementById("dinD").value = "";
+            document.getElementById("dinY").value = "";
+
+            document.getElementById("yaz500").value = "";
+
+                  
+
+            $('#bosDiv').hide();
+            //$('#yaz').hide();
+            $("#hesapSonuc").hide();
+            $('#bosDiv2').hide();
+        });
+    });
+</script>
+
+<script type="text/javascript">
+    /* <![CDATA[ */
+    var google_conversion_id = 1001623803;
+    var google_conversion_language = "en";
+    var google_conversion_format = "3";
+    var google_conversion_color = "ffffff";
+    var google_conversion_label = "o-QdCNDnol4Q-6HO3QM";
+    var google_remarketing_only = false;
+    /* ]]> */
+</script>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-64657117-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+<script>
+ function isNumberKey(evt)
+     {
+     var charCode = (evt.which) ? evt.which : event.keyCode
+     if (charCode > 31 && (charCode < 48 || charCode > 57) && charCode != 44)
+        return false;
+    
+     return true;
+     }
+</script>
+
+ 
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="//www.googleadservices.com/pagead/conversion/1001623803/?label=o-QdCNDnol4Q-6HO3QM&amp;guid=ON&amp;script=0"/>
+</div>
+</noscript>
+</body>
+</html>
